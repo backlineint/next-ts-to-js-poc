@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "remove-ts": "find src -name '*.tsx' -type f -delete && find src -name '*.ts' -type f -delete",
+    "convert-to-js": "npx tsc --project tsconfig-js-export.json && npm run remove-ts"
   },
   "dependencies": {
     "@types/node": "18.15.5",
